@@ -607,7 +607,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .modal__popup--content {
   display: flex;
-  max-width: 800px;
   background: var(--primary-color);
   border-radius: 8px;
   gap: 2rem;

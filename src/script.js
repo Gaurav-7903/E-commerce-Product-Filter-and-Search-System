@@ -538,10 +538,10 @@ async function setInitFilterValue(API, element, callback) {
 }
 
 async function loadData() {
-    await setInitFilterValue("products.json", undefined, setProduct);
-    setInitFilterValue("category.json", document.querySelector(".sidebar__filter--category-value"), setCategory);
-    setInitFilterValue("brand.json", document.querySelector(".sidebar__filter--brand-value"), setBrand);
-    setInitFilterValue("attributes.json", undefined, setAttributes);
+    await setInitFilterValue("Data/products.json", undefined, setProduct);
+    setInitFilterValue("Data/category.json", document.querySelector(".sidebar__filter--category-value"), setCategory);
+    setInitFilterValue("Data/brand.json", document.querySelector(".sidebar__filter--brand-value"), setBrand);
+    setInitFilterValue("Data/attributes.json", undefined, setAttributes);
 }
 
 loadData();
