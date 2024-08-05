@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="container header">
+    <div class="header__left">
+      <h1 class="header__title">Product Catalog</h1>
+    </div>
+    <div class="header__right">
+      <input type="text" class="header__search" placeholder="Search products...">
+      <button class="btn header__toggle-btn"><i class="fa fa-filter"></i> <span>Filters</span></button>
+      <div class="header__sort">
+        <button class="btn header__sort-btn"><span>Sort By</span> <i class="fa-solid fa-sort"></i> <i class="fa fa-chevron-down"></i></button>
+        <ul class="header__sort-options" role="list">
+            <li> <label><input type="radio" name="sort" value="priceAsc">Price : Asc  </label> </li>
+            <li> <label><input type="radio" name="sort" value="priceDesc">Price : Desc  </label> </li>
+            <li><label><input type="radio" name="sort" value="rating">Rating</label></li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="container layout__container">
+    <aside class="sidebar">
+      <div class="sidebar__heading--container">
+        <h3 class="sidebar__heading">Filters</h3>
+        <button class="sidebar__filter--clear" hidden>Clear all</button>
+      </div>
+      <div class="sidebar__filters">
+
+        <div class="sidebar__filter sidebar__filter--category" filter="category">
+          <h4 class="sidebar__filter--heading">Category <i class="fa fa-chevron-down fa-chevron-up arrow"></i></h4>
+          <div class="sidebar__filter--category-value">
+            
+          </div>
+        </div>
+
+        <div class="sidebar__filter sidebar__filter--price" filter="price">
+          <h4 class="sidebar__filter--heading">Price Range <i class="fa fa-chevron-down fa-chevron-up arrow"></i></h4>
+          <div class="sidebar__filter--price-value">
+
+            <div class="slider-container">
+              <div class="price-slider"></div>
+            </div>
+            <div class="range-input">
+              <input type="range" class="min-range" min="0" max="10000" value="0" step="1"/>
+              <input type="range" class="max-range" min="0" max="10000" value="10000" step="1" />
+            </div>
+            <div class="price-input">
+                <input type="number" class="min-input" value="0" />
+                <input type="number" class="max-input" value="10000" />
+            </div>
+          </div>
+
+        </div>
+        <div class="sidebar__filter sidebar__filter--brand" filter="brand">
+          <h4 class="sidebar__filter--heading">Brand <i class="fa fa-chevron-down fa-chevron-up arrow"></i></h4>
+          <div class="sidebar__filter--brand-value">
+            <!-- <label><input type="checkbox"> Bose</label> -->
+          </div>
+        </div>
+
+        <div class="sidebar__filter sidebar__filter--rating" filter="rating">
+          <h4 class="sidebar__filter--heading">Rating <i class="fa fa-chevron-down fa-chevron-up arrow"></i></h4>
+          <div class="sidebar__filter--rating-value">
+            <label><input type="checkbox" value="5"> 5 star and above</label>
+            <label><input type="checkbox" value="4"> 4 star and above</label>
+            <label><input type="checkbox" value="3"> 3 star and above</label>
+            <label><input type="checkbox" value="2"> 2 star and above</label>
+            <label><input type="checkbox" value="1"> 1 star and above</label>
+          </div>
+        </div>
+
+        <div class="category__attribute">
+            <!-- <div class="sidebar__filter sidebar__filter--attributes">
+               <h4 class="sidebar__filter--heading">Attributes <i class="fa fa-chevron-down fa-chevron-up arrow"></i></h4>
+              <div class="sidebar__filter--attributes-value">
+               
+              </div> 
+            </div> -->
+        </div>
+
+      </div>
+    </aside>
+
+    <main class="catalog">
+
+    </main>
+  </section>
+
+  <div class="modal">
+    <div class="modal__popup">
+
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
