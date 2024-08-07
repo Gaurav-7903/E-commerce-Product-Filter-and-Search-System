@@ -193,7 +193,7 @@ clearFilterBtn.addEventListener("click", () => {
         priceRange: [MinMaxPrice.minPrice, MinMaxPrice.maxPrice],
         rating: [],
         brand: [],
-        inputSearch: "",
+        inputSearch : filter.inputSearch,
         attributes: {},
     };
 
@@ -327,13 +327,13 @@ searchInput.addEventListener("input", function () {
 
 
 // Set the price gap
-let priceGap = 500;
+let priceGap = 200;
 
 for (let i = 0; i < priceInputValue.length; i++) {
     priceInputValue[i].addEventListener("input", (e) => {
         let minp = parseInt(priceInputValue[0].value);
         let maxp = parseInt(priceInputValue[1].value);
-        console.log(minp , max);
+        console.log(minp , maxp);
         let diff = maxp - minp;
 
         if (minp < 0) {
@@ -362,7 +362,7 @@ for (let i = 0; i < priceInputValue.length; i++) {
             if (e.target.className === "min-input") {
                 rangeInputValue[0].value = minp;
                 filter.priceRange[0] = minp;
-                let value1 = rangeInputValue[0].max;
+                let value1 = parseInt(rangeInputValue[0].max);
                 rangeValue.style.left = `${(minp / value1) * 100}%`;
             } else {
                 rangeInputValue[1].value = maxp;
